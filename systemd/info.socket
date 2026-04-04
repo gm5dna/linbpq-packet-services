@@ -1,0 +1,12 @@
+[Unit]
+Description=Information services TCP socket for LinBPQ
+
+[Socket]
+# Listen on loopback only — LinBPQ connects via ATTACH.
+# Change the port if 6499 conflicts with another service.
+ListenStream=127.0.0.1:6499
+Accept=yes
+MaxConnections=4
+
+[Install]
+WantedBy=sockets.target

@@ -1,0 +1,25 @@
+[Unit]
+Description=Information services session (connection %i)
+
+[Service]
+Type=simple
+
+# Run as the same user/group that owns LinBPQ.
+# Change these if your LinBPQ runs under a different account.
+User=linbpq
+Group=linbpq
+
+# Edit this path to match your installation.
+WorkingDirectory=/opt/linbpq/services/info
+
+# stdin/stdout are wired to the accepted socket connection.
+StandardInput=socket
+StandardOutput=socket
+StandardError=journal
+
+# Edit this path to match your installation.
+ExecStart=/opt/linbpq/services/info/info-wrapper.sh
+
+# Clean shutdown and 30-minute session limit.
+TimeoutStopSec=10
+RuntimeMaxSec=1800

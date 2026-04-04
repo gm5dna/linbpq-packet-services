@@ -1,0 +1,12 @@
+[Unit]
+Description=Satellite pass prediction TCP socket for LinBPQ
+
+[Socket]
+# Listen on loopback only — LinBPQ connects via ATTACH.
+# Change the port if 6497 conflicts with another service.
+ListenStream=127.0.0.1:6497
+Accept=yes
+MaxConnections=4
+
+[Install]
+WantedBy=sockets.target

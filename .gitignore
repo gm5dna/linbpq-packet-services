@@ -1,0 +1,18 @@
+# Operator's local config — never commit
+config.py
+
+# QRZ credentials — NEVER commit
+qrz.conf
+hamqth.conf
+
+# Cache files
+info/cache/*
+!info/cache/.gitkeep
+
+# TLE data (downloaded at runtime)
+*.tle
+
+# Python
+__pycache__/
+*.pyc
+*.pyo

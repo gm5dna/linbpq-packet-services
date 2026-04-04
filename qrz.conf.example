@@ -1,0 +1,10 @@
+# QRZ.com XML API credentials (paid subscription required).
+# Copy this file to qrz.conf and fill in your details:
+#   cp qrz.conf.example qrz.conf
+#
+# This file is gitignored — never commit real credentials.
+# File permissions should be 640 (readable by linbpq user only):
+#   chmod 640 qrz.conf && chown linbpq:linbpq qrz.conf
+#
+qrz_username=YOUR_CALLSIGN
+qrz_password=YOUR_QRZ_PASSWORD
